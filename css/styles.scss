@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: url(../images/top_bg.svg) top left no-repeat;
+}
+
+header{
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 172px;
+    background-color: rgba(255,255,255,.67);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,.12), inset 0 12px 24px 0 rgba(0,0,0,.12);
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 876px;
+    padding: 0 20px;
+}
+
+.logo{
+    display: block;
+    width: 138px;
+    height: 138px;
+    aspect-ratio:1/1;
+    background: url(../images/logotype.svg) center center no-repeat;
+    background-size: cover;
+}
+
+.header__content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 0;
+    gap: 86px;
+    @media (max-width:876px){
+        gap:20px;
+    }
+    @media (max-width:640px){
+        flex-direction: column;
+        padding: 20px 0;
+        .logo{
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+.header__title{
+    position: relative;
+    display: flex;
+    gap:16px;
+    width: 100%;
+    align-items: center;
+    & h1{
+        font-size: 24px;
+        font-family:"Montserat", sans-serif;
+        letter-spacing: -1%;
+        font-weight: 500;
+    }
+    @media (max-width:640px){
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.header__stat{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 100%;
+    flex-wrap: wrap;
+    @media (max-width:640px){
+        justify-content: center;
+    }
+}
+
+.header__filter{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    @media (max-width:640px){
+        justify-content: center;
+    }
+    .header__filter__title{
+        @media (max-width:640px){
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.flatpickr{
+    position: relative;
+    display: flex;
+    input{
+        width: 100px;
+        height: 30px;
+        border-radius: 4px 0 0 4px;
+        border:1px solid #DEDEDE;
+        font-size: 13px;
+    }
+    .input-button{
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 30px;
+        &.icon-close{
+            background: url(../images/icon-close.svg) no-repeat center center #EBEBEB;
+            background-size: 14px 14px;
+            border-right: 1px solid #dedede;
+        }
+        &.icon-calendar{
+            background: url(../images/icon-calendar.svg) no-repeat center center #EBEBEB;
+            background-size: 20px 20px;
+            border-radius: 0 4px 4px 0; 
+        }
+    }
+}
+
+.badge{
+    position: relative;
+    display: block;
+    padding: 6px 12px;
+    color: #3D8EDA;
+    border: 1px solid #3D8EDA;
+    font-size:13px;
+}
