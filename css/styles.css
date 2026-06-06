@@ -285,10 +285,10 @@ header {
   width: 100%;
   aspect-ratio: 1;
 }
-.row .row__today, .row .row_date, .row .row__upload {
+.row .row__today, .row .row__date, .row .row__upload {
   font-weight: 500;
 }
-.row .row__today > div, .row .row_date > div, .row .row__upload > div {
+.row .row__today > div, .row .row__date > div, .row .row__upload > div {
   display: flex;
   flex-direction: row;
   gap: 18px;
@@ -317,7 +317,7 @@ header {
   width: 203px;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "img img" "img img" "today date" "upload upload";
+  grid-template-areas: "img img" "today date" "upload upload";
 }
 .tiles .row .row__image {
   grid-area: img;
@@ -325,10 +325,13 @@ header {
 .tiles .row .row__today {
   grid-area: today;
 }
+.tiles .row .row__date {
+  grid-area: date;
+}
 .tiles .row .row__upload {
   grid-area: upload;
 }
-.tiles .row .row__today > div, .tiles .row .row_date > div {
+.tiles .row .row__today > div, .tiles .row .row__date > div {
   flex-direction: column;
 }
 .tiles .row .row__upload {
@@ -340,7 +343,7 @@ header {
   .row {
     width: 203px;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "img img" "img img" "today date" "upload upload";
+    grid-template-areas: "img img" "today date" "upload upload";
   }
   .row .row__image {
     grid-area: img;
@@ -348,10 +351,13 @@ header {
   .row .row__today {
     grid-area: today;
   }
+  .row .row__date {
+    grid-area: date;
+  }
   .row .row__upload {
     grid-area: upload;
   }
-  .row .row__today > div, .row .row_date > div {
+  .row .row__today > div, .row .row__date > div {
     flex-direction: column;
   }
   .row .row__upload {

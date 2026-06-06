@@ -279,7 +279,7 @@ header{
             aspect-ratio: 1;
         }
     }
-    .row__today, .row_date, .row__upload{
+    .row__today, .row__date, .row__upload{
         font-weight: 500;
         > div{
             display: flex;
@@ -317,7 +317,6 @@ header{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "img img"
-            "img img"
             "today date"
             "upload upload";
         .row__image{
@@ -326,10 +325,13 @@ header{
         .row__today{
             grid-area: today;
         }
+        .row__date{
+            grid-area: date;
+        }
         .row__upload{
             grid-area: upload;
         }
-        .row__today, .row_date{
+        .row__today, .row__date{
             > div{
                 flex-direction: column;
             }
@@ -345,7 +347,6 @@ header{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "img img"
-            "img img"
             "today date"
             "upload upload";
         .row__image{
@@ -354,10 +355,13 @@ header{
         .row__today{
             grid-area: today;
         }
+        .row__date{
+            grid-area: date;
+        }
         .row__upload{
             grid-area: upload;
         }
-        .row__today, .row_date{
+        .row__today, .row__date{
             > div{
                 flex-direction: column;
             }
